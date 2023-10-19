@@ -23,10 +23,10 @@ const ContactUs = () => {
    })
 
    const newsletterFormik = useFormik({
-      initialValues: {email: ""},
+      initialValues: { email: "" },
       validationSchema: newsletterValidation,
       onSubmit: (value, action) => {
-         console.log("newsletterformik",value)
+         console.log("newsletterformik", value)
          action.resetForm();
       }
    })
@@ -93,7 +93,7 @@ const ContactUs = () => {
                      <div className="map">
                         <figure><img src={Map} alt="map" /></figure>
                      </div>
-                     <form className="bottom_form"  onSubmit={newsletterFormik.handleSubmit}>
+                     <form className="bottom_form" onSubmit={newsletterFormik.handleSubmit}>
                         <h3>Newsletter</h3>
                         <input className="enter" placeholder="Enter your email" type="text" name="email"
                            value={newsletterFormik.values.email}
@@ -101,7 +101,7 @@ const ContactUs = () => {
                            onBlur={newsletterFormik.handleBlur}
                         />
                         <button className="sub_btn" type='submit'>subscribe</button>
-                        {newsletterFormik.errors.email && newsletterFormik.touched.email ? <p className='error-msg'>{newsletterFormik.errors.email}</p> : null}
+                        {newsletterFormik.errors.email && newsletterFormik.touched.email ? <p className='error-msg-subscribe'>{newsletterFormik.errors.email}</p> : null}
                      </form>
                   </div>
                </div>

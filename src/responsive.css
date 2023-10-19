@@ -381,6 +381,19 @@
         background: url(./assets/images/menu_icon.png);
         background-repeat: no-repeat;
     }
+
+    .sub_btn {
+        margin: 0px auto;
+    }
+
+    .error-msg-subscribe {
+        display: flex;
+        justify-content: center;
+        margin-top: 1px;
+        margin-left: 5px;
+        font-size: 14px;
+        color: red;
+    }
 }
 
 @media screen and (min-width: 575px) and (max-width: 1200px) {
